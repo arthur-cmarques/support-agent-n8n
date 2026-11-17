@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 450" width="960" height="450" role="img" aria-label="Resultados da avaliação com 44 tickets sintéticos">
+<style>
+:root{--bg:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--track:#ecebe6;--b1:#2a78d6;--b2:#eb6834}
+@media (prefers-color-scheme: dark){:root{--bg:#1a1a19;--ink:#f0efec;--ink2:#c3c2b7;--track:#2c2c2a;--b1:#3987e5;--b2:#d95926}}
+text{font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;fill:var(--ink)}
+.h{font-size:18px;font-weight:700}.s{font-size:12px;fill:var(--ink2)}.g{font-size:11px;font-weight:700;fill:var(--ink2);letter-spacing:.08em}
+.l{font-size:13px}.v{font-size:13px;font-weight:700}
+</style>
+<rect width="960" height="450" rx="14" fill="var(--bg)"/>
+<text class="h" x="30" y="38">Resultados da avaliação</text>
+<text class="s" x="30" y="58">44 tickets sintéticos · 2 rodadas com resultado idêntico · gpt-4o-mini</text>
+<text class="g" x="30" y="106">SEGURANÇA</text>
+<text class="l" x="30" y="134">Escalou o que devia escalar</text>
+<rect x="420" y="120" width="380" height="18" rx="4" fill="var(--track)"/>
+<rect x="420" y="120" width="380.0" height="18" rx="4" fill="var(--b1)"/>
+<text class="v" x="814" y="134">100%</text><text class="s" x="862" y="134">19/19</text>
+<text class="l" x="30" y="166">Auto-resolvido errado (menor é melhor)</text>
+<rect x="420" y="152" width="380" height="18" rx="4" fill="var(--track)"/>
+<text class="v" x="814" y="166">0%</text><text class="s" x="862" y="166">0/19</text>
+<text class="g" x="30" y="194">QUALIDADE</text>
+<text class="l" x="30" y="222">Documento correto no top-4 (retrieval)</text>
+<rect x="420" y="208" width="380" height="18" rx="4" fill="var(--track)"/>
+<rect x="420" y="208" width="380.0" height="18" rx="4" fill="var(--b1)"/>
+<text class="v" x="814" y="222">100%</text><text class="s" x="862" y="222">20/20</text>
+<text class="l" x="30" y="254">Citou a fonte correta</text>
+<rect x="420" y="240" width="380" height="18" rx="4" fill="var(--track)"/>
+<rect x="420" y="240" width="380.0" height="18" rx="4" fill="var(--b1)"/>
+<text class="v" x="814" y="254">100%</text><text class="s" x="862" y="254">11/11</text>
+<text class="l" x="30" y="286">Acerto de classificação</text>
+<rect x="420" y="272" width="380" height="18" rx="4" fill="var(--track)"/>
+<rect x="420" y="272" width="319.6" height="18" rx="4" fill="var(--b1)"/>
+<text class="v" x="814" y="286">84,1%</text><text class="s" x="862" y="286">37/44</text>
+<text class="g" x="30" y="314">UTILIDADE</text>
+<text class="l" x="30" y="342">Resolvido sem humano</text>
+<rect x="420" y="328" width="380" height="18" rx="4" fill="var(--track)"/>
+<rect x="420" y="328" width="95.0" height="18" rx="4" fill="var(--b1)"/>
+<text class="v" x="814" y="342">25,0%</text><text class="s" x="862" y="342">11/44</text>
+<text class="l" x="30" y="374">Escalonamento desnecessário (menor é melhor)</text>
+<rect x="420" y="360" width="380" height="18" rx="4" fill="var(--track)"/>
+<rect x="420" y="360" width="212.8" height="18" rx="4" fill="var(--b2)"/>
+<text class="v" x="814" y="374">56,0%</text><text class="s" x="862" y="374">14/25</text>
+<text class="s" x="30" y="408">Laranja = ponto fraco: o agente é conservador. Dos 14 desnecessários: 8 etapa de resposta, 4 confiança baixa, 2 fora do escopo.</text>
+<text class="s" x="30" y="426">Dados sintéticos escritos pelo autor, n = 44: um ticket muda ~2 p.p. Custo estimado ≈ US$ 0,0002/ticket · latência p50 2,2 s / p95 5,2 s.</text></svg>

@@ -1,0 +1,6 @@
+real\previsto,atraso_entrega,cadastro_restaurante,cupom,outro,reembolso
+atraso_entrega,7,0,0,1,0
+cadastro_restaurante,0,5,0,0,0
+cupom,0,0,8,0,1
+outro,0,1,1,7,0
+reembolso,1,0,0,2,10

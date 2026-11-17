@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="960" height="500" role="img" aria-label="Arquitetura do agente de suporte: webhook, classificação por LLM, decisão de escalar, RAG, geração, guardrail e resposta">
+
+<style>
+  :root{--bg:#fcfcfb;--ink:#0b0b0b;--ink2:#52514e;--line:#9a988f;--grid:#e6e5e0;
+   --llm:#2a78d6;--llmf:#e4eefb;--rag:#1baf7a;--ragf:#e0f5ec;--rule:#52514e;--rulef:#f0efec;--hum:#eb6834;--humf:#fdebe3;}
+  @media (prefers-color-scheme: dark){:root{--bg:#1a1a19;--ink:#f0efec;--ink2:#c3c2b7;--line:#77756d;--grid:#2c2c2a;
+   --llm:#3987e5;--llmf:#1c2c44;--rag:#199e70;--ragf:#16322a;--rule:#c3c2b7;--rulef:#262624;--hum:#d95926;--humf:#3a231a;}}
+  text{font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;fill:var(--ink)}
+  .t{font-size:13px;font-weight:600}.s{font-size:11px;fill:var(--ink2)}.h{font-size:18px;font-weight:700}
+  .lbl{font-size:11px;font-weight:600;fill:var(--ink2)}
+  .arrow{stroke:var(--line);stroke-width:2;fill:none}
+</style>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--line)"/></marker></defs>
+<rect width="960" height="500" fill="var(--bg)" rx="14"/>
+<text class="h" x="30" y="38">Fluxo de um ticket</text>
+<text class="s" x="30" y="56">Escalar cedo economiza custo; o guardrail final impede resposta sem fonte.</text>
+<rect x="30" y="90" width="170" height="64" rx="10" fill="var(--rulef)" stroke="var(--rule)" stroke-width="2"/><text class="t" x="115.0" y="119.0" text-anchor="middle">Webhook</text><text class="s" x="115.0" y="136.0" text-anchor="middle">ticket em texto livre</text>
+<rect x="260" y="90" width="170" height="64" rx="10" fill="var(--rulef)" stroke="var(--rule)" stroke-width="2"/><text class="t" x="345.0" y="119.0" text-anchor="middle">Normalizar</text><text class="s" x="345.0" y="136.0" text-anchor="middle">limpa e valida entrada</text>
+<rect x="490" y="90" width="170" height="64" rx="10" fill="var(--llmf)" stroke="var(--llm)" stroke-width="2"/><text class="t" x="575.0" y="119.0" text-anchor="middle">Classificar (LLM)</text><text class="s" x="575.0" y="136.0" text-anchor="middle">categoria, confiança, injection</text>
+<rect x="720" y="90" width="170" height="64" rx="10" fill="var(--rulef)" stroke="var(--rule)" stroke-width="2"/><text class="t" x="805.0" y="119.0" text-anchor="middle">Consultar pedido</text><text class="s" x="805.0" y="136.0" text-anchor="middle">mock + decide a rota</text>
+<path class="arrow" d="M200 122 H260" marker-end="url(#a)"/>
+<path class="arrow" d="M430 122 H490" marker-end="url(#a)"/>
+<path class="arrow" d="M660 122 H720" marker-end="url(#a)"/>
+<path class="arrow" d="M805 154 V210" marker-end="url(#a)"/>
+<rect x="720" y="214" width="170" height="64" rx="10" fill="var(--rulef)" stroke="var(--rule)" stroke-width="2"/><text class="t" x="805.0" y="243.0" text-anchor="middle">Escalar antes do RAG?</text><text class="s" x="805.0" y="260.0" text-anchor="middle">risco · baixa confiança</text>
+<rect x="490" y="214" width="170" height="64" rx="10" fill="var(--ragf)" stroke="var(--rag)" stroke-width="2"/><text class="t" x="575.0" y="243.0" text-anchor="middle">Recuperar políticas</text><text class="s" x="575.0" y="260.0" text-anchor="middle">vector store, top-4 (RAG)</text>
+<rect x="260" y="214" width="170" height="64" rx="10" fill="var(--llmf)" stroke="var(--llm)" stroke-width="2"/><text class="t" x="345.0" y="243.0" text-anchor="middle">Gerar resposta (LLM)</text><text class="s" x="345.0" y="260.0" text-anchor="middle">cita a fonte KB-xx</text>
+<rect x="30" y="214" width="170" height="64" rx="10" fill="var(--rulef)" stroke="var(--rule)" stroke-width="2"/><text class="t" x="115.0" y="243.0" text-anchor="middle">Guardrail final</text><text class="s" x="115.0" y="260.0" text-anchor="middle">citação válida? limite R$ 60?</text>
+<path class="arrow" d="M720 246 H660" marker-end="url(#a)"/><text class="lbl" x="690" y="238" text-anchor="middle">não</text>
+<path class="arrow" d="M490 246 H430" marker-end="url(#a)"/>
+<path class="arrow" d="M260 246 H200" marker-end="url(#a)"/>
+<rect x="720" y="380" width="170" height="64" rx="10" fill="var(--humf)" stroke="var(--hum)" stroke-width="2"/><text class="t" x="805.0" y="409.0" text-anchor="middle">Escalonamento</text><text class="s" x="805.0" y="426.0" text-anchor="middle">resumo para o humano</text>
+<rect x="375" y="380" width="210" height="64" rx="10" fill="var(--rulef)" stroke="var(--rule)" stroke-width="2"/><text class="t" x="480.0" y="409.0" text-anchor="middle">Responder</text><text class="s" x="480.0" y="426.0" text-anchor="middle">JSON: decisão, resposta, docs</text>
+<path class="arrow" d="M805 278 V380" marker-end="url(#a)"/><text class="lbl" x="815" y="335">sim</text>
+<path class="arrow" d="M720 412 H585" marker-end="url(#a)"/>
+<path class="arrow" d="M115 278 V412 H375" marker-end="url(#a)"/><text class="lbl" x="125" y="335">ok</text>
+<path d="M70 278 V470 H805 V444" fill="none" stroke="var(--hum)" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#a)"/>
+<text class="lbl" x="440" y="462" text-anchor="middle" style="fill:var(--hum)">falhou no guardrail → escala para humano</text>
+<rect x="420" y="26" width="14" height="14" rx="3" fill="var(--llmf)" stroke="var(--llm)" stroke-width="2"/><text class="s" x="440" y="37">LLM</text>
+<rect x="483" y="26" width="14" height="14" rx="3" fill="var(--ragf)" stroke="var(--rag)" stroke-width="2"/><text class="s" x="503" y="37">Recuperação</text>
+<rect x="602" y="26" width="14" height="14" rx="3" fill="var(--rulef)" stroke="var(--rule)" stroke-width="2"/><text class="s" x="622" y="37">Regra / código</text>
+<rect x="742" y="26" width="14" height="14" rx="3" fill="var(--humf)" stroke="var(--hum)" stroke-width="2"/><text class="s" x="762" y="37">Humano</text>
+</svg>
